@@ -31,21 +31,19 @@
 public class StaticBean {
 
     String name;
-    静态变量
+    //静态变量
     static int age;
 
     public StaticBean(String name) {
         this.name = name;
     }
-    静态方法
+    //静态方法
     static void SayHello() {
-        System.out.println(Hello i am java);
+        System.out.println("Hello i am java");
     }
     @Override
     public String toString() {
-        return StaticBean{ +
-                name=' + name + ''' + age + age +
-                '}';
+        return "StaticBean{ name=" + name + " + age "+ age +"}";
     }
 }
 ```
@@ -54,14 +52,14 @@ public class StaticBean {
 public class StaticDemo {
 
     public static void main(String[] args) {
-        StaticBean staticBean = new StaticBean(1);
-        StaticBean staticBean2 = new StaticBean(2);
-        StaticBean staticBean3 = new StaticBean(3);
-        StaticBean staticBean4 = new StaticBean(4);
+        StaticBean staticBean = new StaticBean("1");
+        StaticBean staticBean2 = new StaticBean("2");
+        StaticBean staticBean3 = new StaticBean("3");
+        StaticBean staticBean4 = new StaticBean("4");
         StaticBean.age = 33;
-        StaticBean{name='1'age33} StaticBean{name='2'age33} StaticBean{name='3'age33} StaticBean{name='4'age33}
-        System.out.println(staticBean+ +staticBean2+ +staticBean3+ +staticBean4);
-        StaticBean.SayHello();Hello i am java
+//        StaticBean{name='1'age=33}; StaticBean{name='2'age33} StaticBean{name='3'age33} StaticBean{name='4'age33}
+        System.out.println(staticBean+"--" +staticBean2+"--" +staticBean3+ "--"+staticBean4);
+        StaticBean.SayHello();//Hello i am java
     }
 
 }
